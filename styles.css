@@ -1,0 +1,35 @@
+body {
+    background-color: #282828;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+ .button:hover {
+    background-color: #45a049;
+    }
+    
+ input[type=text] {
+        width: 40%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid rgb(7, 7, 7);
+        border-radius: 4px;
+      }
+      p {
+        color: rgb(237, 237, 242);
+        font-size: 22px;
+        transition: color 0.3s ease;
+      }
