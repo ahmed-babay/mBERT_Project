@@ -1,16 +1,14 @@
 import fetch from 'node-fetch';
 global.fetch = fetch;
 import { HfInference } from "@huggingface/inference";
-import dotenv  from "dotenv";
+import { config } from 'dotenv';
 
-dotenv.config();
+config();
 
-const HF_ACCESS_TOKEN ="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";
-
-const inference = new HfInference(HF_ACCESS_TOKEN);
+const inference = new HfInference(process.env.ACCESS_TOKEN);
 
 const model ="nlpconnect/vit-gpt2-image-captioning";
-const imageUrl = "https://content.mosaiquefm.net/uploads/content/thumbnails/oussema_mellouli_1522611434.jpg"
+const imageUrl = "https://images4.alphacoders.com/109/thumb-1920-1091636.jpg"
 
 const response = await fetch (imageUrl);
 const imageBlob = await response.blob();
