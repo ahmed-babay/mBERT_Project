@@ -5,7 +5,7 @@ import dotenv  from "dotenv";
 
 dotenv.config();
 
-const HF_ACCESS_TOKEN ="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";
+const HF_ACCESS_TOKEN ="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";
 
 const inference = new HfInference(HF_ACCESS_TOKEN);
 

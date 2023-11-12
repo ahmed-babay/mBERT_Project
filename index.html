@@ -8,7 +8,7 @@
   <body>
     <div id="app">
       <div>
-        <input type="text" v-model="userInput" placeholder="Enter your input text with [MASK]" />
+        <input type="text" v-model="userInput" placeholder="Enter your sentence here" />
         <button class="button" @click="fetchData">Fetch Data</button>
       </div>
       <div>
@@ -30,7 +30,7 @@
 
             try {
               const response = await fetch(
-                "https://api-inference.huggingface.co/models/bert-base-multilingual-cased",
+                "https://api-inference.huggingface.co/models/tomaarsen/span-marker-mbert-base-multinerd",
                 {
                   headers: { Authorization: "Bearer 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" },
                   method: "POST",
@@ -39,12 +39,9 @@
               );
 
               const result = await response.json();
-              //this.responseData = result;
-              console.log("test")
-              for(i = 0; i < result.length; i++) {
-                console.log(result[i].token_str)
-                this.responseData = result[i].token_str
-              }
+              const sequence_score=result.map(item => `${item.entity_group} (word: ${item.word})`);
+              this.responseData=sequence_score.join();
+              //test 123
             } catch (error) {
               console.error("Error fetching data:", error);
             }

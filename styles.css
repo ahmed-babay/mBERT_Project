@@ -8,7 +8,7 @@ body {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 11px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -29,7 +29,7 @@ body {
         border-radius: 4px;
       }
       p {
-        color: rgb(237, 237, 242);
+        color: rgb(255, 255, 255);
         font-size: 22px;
         transition: color 0.3s ease;
       }
