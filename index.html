@@ -12,7 +12,8 @@
         <button class="button" @click="fetchData">Fetch Data</button>
       </div>
       <div>
-        <p>Response: {{ responseData }}</p>
+        <p>Response:</p>
+        <div v-html="formattedResponseData"></div>
       </div>
     </div>
 
